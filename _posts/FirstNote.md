@@ -6,11 +6,12 @@ date:       2019-06-22
 author:     ElevisJang
 header-img: img/post-bg-universe.jpg
 catalog: true
-tags:note
+tags: note
     - Blog
 ---
 ## 前言
 
+## 正文
 自动装箱拆箱：
 Integer i = new Integer(10);  //javaSE5之前必须这样声明
 Integer i = 10;   //javaSE5之后可以这样  提供了自动装箱的特性
