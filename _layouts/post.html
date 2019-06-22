@@ -65,17 +65,17 @@ layout: default
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="上一篇">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="上一篇"><!-- {{page.next.title}}-->
                         Previous<br>
-                        <span>{{page.previous.title}}</span>
+                        <span>上一篇</span>
                         </a>
                     </li>
                     {% endif %}
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="下一篇">
                         Next<br>
-                        <span>{{page.next.title}}</span>
+                        <span>下一篇</span>
                         </a>
                     </li>
                     {% endif %}
