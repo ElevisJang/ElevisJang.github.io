@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      第一次提交笔记
+subtitle:   添加了笔记
+date:       2019-06-22
+author:     ElevisJang
+header-img: img/post-bg-universe.jpg
+catalog: true
+tags:note
+    - Blog
+---
 自动装箱拆箱：
 Integer i = new Integer(10);  //javaSE5之前必须这样声明
 Integer i = 10;   //javaSE5之后可以这样  提供了自动装箱的特性
@@ -12,7 +23,7 @@ Short d = 200;
 (a == b) 返回true   
 (c == d) 返回false
 
-详解：看short源码 
+详解：看short源码
 public static Short valueOf(short s) {
         final int offset = 128;
         int sAsInt = s;
@@ -28,12 +39,12 @@ public static Short valueOf(short s) {
 
         static final Short cache[] = new Short[-(-128) + 127 + 1];
 
-        static { 
+        static {
             for(int i = 0; i < cache.length; i++)
                 cache[i] = new Short((short)(i - 128));
         }
     }
-装箱时调用valueOf()方法  判断传入参数是否在-128-127 范围内 如果在，就返回该对象 如果不在返回新的对象 
+装箱时调用valueOf()方法  判断传入参数是否在-128-127 范围内 如果在，就返回该对象 如果不在返回新的对象
 "=="是比较地址，所以（a == b） 判断数值在取值区间 故不会返回新对象 地址不变 返回true （c == d）返回新对象地址不同返回false
 
 整数缓冲区：
@@ -51,7 +62,7 @@ String s3 = new String("abc"); 1个对象   //
 1.池中分配空间存入abc 2.堆中开辟空间存入abc 3.s3指向堆中对象
 String s3 = new String("abc");  //2个对象
 String s1 = "abc"; //0个对象 池中已经有对象了
-String s2 = "abc"; //0个对象 
+String s2 = "abc"; //0个对象
 
 
 
@@ -168,40 +179,12 @@ Object get(int index)// 返回集合中指定位置的元素
 List subList(int fromIndex, int toIndex)//返回fromIndex到toIndex之间的集合元素
 
 
-List实现类： 
+List实现类：
 
-*ArrayList 
+*ArrayList
 特点：有序、有下标、可重复、线程安全
 List接口的大小可变数组的实现。实现了所有可选列表操作，并允许包括null在内的所有元素。
 此类还提供一些方法来操作内部用来存储列表的数组的大小，（此类大致上等同于Vector，除了此类不同步）
 jdk1.7之前创建时默认大小是10.  之后优化为默认为空
 当首次调用add()方法时才会给定空间
 调用remove时删除占用空间
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
